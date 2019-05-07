@@ -14,6 +14,6 @@ module samtools/1.9
 
 # Your commands
 bwa index -p pacbio_index Enterococci.contigs.fasta
-bwa mem pacbio_index E745-1.L500_SZAXPI015146-56_1_clean.fq.gz E745-1.L500_SZAXPI015146-56_2_clean.fq.gz > aln-pe.sam | samtools sort -o aln-pe.bam
+bwa mem pacbio_index E745-1.L500_SZAXPI015146-56_1_clean.fq.gz E745-1.L500_SZAXPI015146-56_2_clean.fq.gz > aln-pe.sam
 
 
