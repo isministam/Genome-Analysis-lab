@@ -9,9 +9,13 @@
 
 # Load modules
 module load bioinfo-tools
+module load samtools/1.9
 module load htseq
 
 # Your commands
 
 
-htseq-count -f bam out_BH_Map_ERR1797972.bam out_BH_Map_ERR1797973.bam out_BH_Map_ERR1797974.bam PROKKA_04122019.gtf
+samtools view out_BH_Map_ERR1797972.bam | htseq-count -f bam --type CDS out_BH_Map_ERR1797972.bam PROKKA_04122019.gtf > out_1797972.txt
+samtools view out_BH_Map_ERR1797973.bam | htseq-count -f bam --type CDS out_BH_Map_ERR1797973.bam PROKKA_04122019.gtf > out_1797973.txt
+samtools view out_BH_Map_ERR1797974.bam | htseq-count -f bam --type CDS out_BH_Map_ERR1797974.bam PROKKA_04122019.gtf > out_1797974.txt
+
