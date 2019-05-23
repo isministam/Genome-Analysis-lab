@@ -9,15 +9,14 @@
 
 # Load modules
 module load bioinfo-tools
-module load samtools/1.9
 module load htseq
 
 # Your commands
 
 
-samtools view out_Serum_Map_ERR1797969.bam | htseq-count -f bam -t CDS -i ID -r pos out_Serum_Map_ERR1797969.bam PROKKA_05072019.gff > out_1797969.count
-samtools view out_Serum_Map_ERR1797970.bam | htseq-count -f bam -t CDS -i ID -r pos out_Serum_Map_ERR1797970.bam PROKKA_05072019.gff > out_1797970.count
-samtools view out_Serum_Map_ERR1797971.bam | htseq-count -f bam -t CDS -i ID -r pos out_Serum_Map_ERR1797971.bam PROKKA_05072019.gff > out_1797971.count
+htseq-count -f bam -t CDS -i ID -r pos out_Serum_Map_ERR1797969.bam PROKKA_05072019.gff > out_1797969.count
+htseq-count -f bam -t CDS -i ID -r pos out_Serum_Map_ERR1797970.bam PROKKA_05072019.gff > out_1797970.count
+htseq-count -f bam -t CDS -i ID -r pos out_Serum_Map_ERR1797971.bam PROKKA_05072019.gff > out_1797971.count
 
 
 
