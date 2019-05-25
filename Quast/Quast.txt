@@ -1,0 +1,3 @@
+Quast was used for the ASSEMBLY EVALUATION
+
+quast.py Enterococci.contigs.fasta -R Enterococci_sequence.fasta
