@@ -1,8 +1,0 @@
-Canu was used for ASSEMBLY:
-
-By default, Canu will correct the reads, then trim the reads, then assemble the reads to unitigs. Canu needs to know the approximate genome size (so it can determine coverage in the input reads) and the technology used to generate the reads.
-
-canu \
--p Enterococci -d Canu_Assembly_Output_Pacbio \
-genomeSize=2.8m \
--pacbio-raw /proj/g2019003/nobackup/private/1_Zhang_2017/genomics_data/PacBio/*.subreads.fastq.gz

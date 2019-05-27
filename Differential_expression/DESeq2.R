@@ -10,7 +10,7 @@ library('DESeq2')
 
 
 
-directory <- "C:/Users/Ismini/Documents/GitHub/Genome-Analysis-lab/Diff_ex/files"
+directory <- "C:/Users/Ismini/Documents/GitHub/Genome-Analysis-lab/Differential_expression/files"
 
 
 
@@ -52,7 +52,7 @@ rld <- rlog(dds, blind=FALSE)
 #              digits = 2, ...)
 
 
-mat =assay(rld)[ head(order(-res$log2FoldChange), 25),] 
+mat =assay(rld)[ tail(order(res$log2FoldChange), 15),] 
 mat = mat - rowMeans(mat) 
 pheatmap(mat)
 
